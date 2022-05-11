@@ -1,0 +1,59 @@
+html, body{
+  background: #121212;
+}
+
+.navbar-brand{
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.hero{
+  padding: 300px 0;
+  background: url('../img/bg1.png') no-repeat;
+  background-size: cover;
+}
+
+.btn-purple{
+  color: #fff;
+  background: purple;
+  border-radius: 50px;
+}
+
+.revolution{
+  padding: 50px 0;
+  background: #121212;
+  color: #eee;
+}
+
+/*---------------------
+  Services Section
+-----------------------*/
+
+.services-section {
+	padding-top: 0;
+	padding-bottom: 80px;
+}
+
+.service-item {
+	text-align: center;
+	background: #222222;
+	padding: 46px 50px 0;
+	height: 280px;
+	-webkit-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	margin-bottom: 30px;
+}
+
+.service-item:hover {
+	border-bottom: 3px solid #e32879;
+	margin-top: -10px;
+}
+
+.service-item h4 {
+	font-size: 22px;
+	color: #ffffff;
+	font-weight: 700;
+	margin-top: 33px;
+	margin-bottom: 25px;
+}
