@@ -20,6 +20,20 @@
       position:absolute;
       z-index: 1;
     }
+
+    .numberCircle {
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    padding: 8px;
+
+    background: #fff;
+    border: 2px solid #666;
+    color: #666;
+    text-align: center;
+
+    font: 32px Arial, sans-serif;
+}
   </style>
 </head>
 <body>
@@ -165,7 +179,7 @@
     </div>
   </section>
 
-  <section style = "padding: 50px 0;background: purple">
+  <section style = "padding: 50px 0;background: purple; position: relative;">
     <div class = "container">
       <p class = "text-center text-white">Get to know us</p>
     <h3 class = "text-center text-white">HOW BETTING WORKS</h3>
@@ -174,7 +188,7 @@
       <path d="M 10 80 C 40 10, 65 10, 95 80, 120 150, 190 200" stroke="black" fill="transparent"/>
     </svg> -->
     
-    <svg class="curved-line" viewBox="31 9 226 120">
+    <svg class="curved-line" viewBox="31 9 226 120" style = "margin: 100px 0">
 
       <defs>
         <linearGradient x1="50%" y1="108.24102%" x2="50%" y2="29.9104628%" id="curved-line-gradient">
@@ -182,8 +196,8 @@
           <stop offset="100%"></stop>
         </linearGradient>
   
-        <path d="M34.7597656,24.6621094 C34.7597656,24.6621094 77.5078125,36.5332031 89.4667969,81.3476562 C93.4257812,126.162109 113.244141,136.978516 125.021484,61.3085937 C136.798828,-14.3613281 177.576172,3.91601562 181.253906,53.3027344 C184.931641,102.689453 198.804688,86.3828125 203.578125,66.0292969 C208.351562,45.6757812 219.548828,33.1386719 252.980469,33.1386719"
-        id="curved-line" stroke="white" fill="transparent"></path>
+        <path d="M34,35 C34,34 37,46 79,55 C140,80 110,-40 169,40 C200,180 300,-80 180,-40"
+        id="curved-line" stroke="white" stroke-dasharray = "3 1" fill="transparent"></path>
   
         <filter id="dropshadow" height="130%">
           <!-- blur amount -->
@@ -206,6 +220,8 @@
         <use stroke="url(#curved-line-gradient)" xlink:href="#curved-line"></use>
       </g>
     </svg>
+
+    <div class="numberCircle" style = "position: absolute; top: 420px;">30</div>
 
   </div>
   </section>
