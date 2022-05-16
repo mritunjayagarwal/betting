@@ -90,7 +90,15 @@ html, body{
 	color: #fff;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
+
+	.bg-hero{
+		display: none;
+	}
+
+	.controller{
+		display: none;
+	}
 
 	.point1{
 		position: absolute; top: 350px;
