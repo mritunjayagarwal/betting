@@ -38,6 +38,25 @@
 </head>
 <body>
 
+<?php
+
+
+$conn = mysqli_connect("localhost", "root", "", "data");
+
+if(isset($_POST["submit"])){
+  $name = $_POST["name"];
+  $age = $_POST["age"];
+  $country = $_POST["country"];
+
+  $query = "INSERT INTO tb_data VALUES('$name', '$age', '$country')";
+  mysqli_query($conn,$query);
+  echo
+  "
+  <script> alert('Data Inserted Successfully'); </script>
+  ";
+}
+?>
+
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
     <div class="container">
       <a class="navbar-brand" href="#">LOGO</a>
@@ -48,6 +67,21 @@
   </nav>
   
   <section class = "hero" style = "padding: 250px 0;overflow: hidden">
+  <form class="" action="" method="post" autocomplete="off">
+      <label for="">Name</label>
+      <input type="text" name="name" required value="">
+      <label for="">Age</label>
+      <input type="number" name="age" required value="">
+      <label for="">Country</label>
+      <select class="" name="country" required>
+        <option value="" selected hidden>Select Country</option>
+        <option value="USA">USA</option>
+        <option value="UK">UK</option>
+        <option value="India">India</option>
+      </select>
+      <br>
+      <button type="submit" name="submit">Submit</button>
+    </form>
     <div style = "position: relative">
       <div class = "container">
         <div class = "row">
