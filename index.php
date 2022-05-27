@@ -9,7 +9,46 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
+
+    .bg-img1{
+      width: 500px;
+      height: auto;
+      position: absolute;
+      top:-200px;
+      right: -100px;
+    }
+
+    .bg-img2{
+      width: 350px;
+      height: auto;
+      position: absolute;
+      top:50px;
+      right: 300px;
+    }
+
+    .bg-img3{
+      width: 350px;
+      height: auto;
+      position: absolute;
+      top: 180px;
+      right: -50px;
+    }
+
+    .bg-img4{
+      width: 220px;
+      height: auto;
+      position: absolute;
+      display: none;
+      top: -190px;
+      left: -70px;
+    }
+
     .front-img
     {
       position:absolute;
@@ -31,9 +70,86 @@
     border: 2px solid #666;
     color: #666;
     text-align: center;
+    z-index: 0;
 
     font: 32px Arial, sans-serif;
 }
+
+.object {
+  animation: MoveUpDown 2s linear infinite;
+}
+.object2 {
+  animation: MoveUpDown2 2s linear infinite;
+}
+.object3 {
+  animation: MoveUpDown3 5s linear infinite;
+}
+
+@keyframes MoveUpDown {
+  0% {
+    top: -180px;
+  }
+
+  50% {
+    top: -175px;
+  }
+
+  100% {
+    top: -180px;
+  }
+}
+
+@keyframes MoveUpDown2 {
+  0% {
+    top: 80px;
+  }
+
+  50% {
+    top: 75px;
+  }
+
+  100% {
+    top: 80px;
+  }
+}
+
+@keyframes MoveUpDown3 {
+  0% {
+    top: 200px;
+  }
+
+  50% {
+    top: 180px;
+  }
+
+  100% {
+    top: 200px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .bg-img1{
+    /* width: 250px;
+    top: 40% !important;
+
+    right: -50px; */
+    display: none;
+  }
+
+  .bg-img2{
+    display: none;
+  }
+
+  .bg-img3{
+    display: none;
+  }
+
+  .bg-img4{
+    display: block;
+  }
+
+}
+
   </style>
 </head>
 <body>
@@ -62,43 +178,28 @@ if(isset($_POST["submit"])){
       <a class="navbar-brand" href="#">LOGO</a>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       </ul>
-      <button class = "btn btn-purple btn-round">Contact Us</button>
+      <button class = "btn btn-purple btn-round" data-toggle="modal" data-target="#form">Contact Us</button>
     </div>
   </nav>
   
   <section class = "hero" style = "padding: 250px 0;overflow: hidden">
-  <form class="" action="" method="post" autocomplete="off">
-      <label for="">Name</label>
-      <input type="text" name="name" required value="">
-      <label for="">Age</label>
-      <input type="number" name="age" required value="">
-      <label for="">Country</label>
-      <select class="" name="country" required>
-        <option value="" selected hidden>Select Country</option>
-        <option value="USA">USA</option>
-        <option value="UK">UK</option>
-        <option value="India">India</option>
-      </select>
-      <br>
-      <button type="submit" name="submit">Submit</button>
-    </form>
     <div style = "position: relative">
       <div class = "container">
         <div class = "row">
           <div class = "col-lg-6">
             <div class = "container">
               <div class = "heading text-white">
-                <h1 style = "font-size: 50px;">BET, WIN, EARN</h1>
-                <h1 style = "font-size: 50px;">LIVE E-SPORTS CONTESTS</h1>
-                <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation</p>
+                <h1 style = "font-size: 50px;z-index: 2" data-aos="fade-up">BET, WIN, EARN</h1>
+                <h1 style = "font-size: 50px;z-index: 2">LIVE E-SPORTS CONTESTS</h1>
+                <p class = "int-p" style = "z-index: 2;position: relative">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation</p>
               </div>
-              <div class = "email-subscribe px-2 py-2 mt-4" style = "background: #fff; border-radius: 50px;">
-                <div class = "d-flex">
-                  <div class = "" style = "flex: 1;">
-                    <input type="email" class = "w-100 p-2" style = "border:none; outline: none;" placeholder = "Enter Email Id">
+              <div class = "email-subscribe px-2 py-2 mt-4" style = "z-index: 2;background: #fff; border-radius: 50px;position: relative">
+                <div class = "d-flex" style = "z-index: 2">
+                  <div class = "" style = "flex: 1;z-index: 2">
+                    <input type="email" class = "w-100 p-2" style = "border:none; outline: none;z-index: 2" placeholder = "Enter Email Id">
                   </div>
-                  <div>
-                    <button class = "btn btn-primary p-2" style = "border-radius: 20px;">Get Started --></button>
+                  <div style = "z-index: 2">
+                    <button class = "btn btn-primary p-2" style = "border-radius: 20px;">Get Started &rarr;</button>
                   </div>  
                 </div>
               </div>
@@ -107,9 +208,10 @@ if(isset($_POST["submit"])){
         </div> 
       </div>
       <div class = "mainBg-contents">
-        <img src="./assets/img/Keyboard.png" class = "bg-hero bg-img1" style = "width: 500px; height: auto;position: absolute;top:-200px; right: -100px;" alt="">
-        <img src="./assets/img/Joystick.png" class = "bg-hero bg-img2" style = "width: 350px; height: auto;position: absolute;top:50px; right: 300px;" alt="">
-        <img src="./assets/img/Mouse.png" class = "bg-hero bg-img3" style = "width: 350px; height: auto;position: absolute;top: 180px;right: -50px" alt="">
+        <img src="./assets/img/Keyboard.png" class = "bg-img1 object">
+        <img src="./assets/img/Joystick.png" class = "bg-img2 object2">
+        <img src="./assets/img/Mouse.png" class = "bg-img3 object3">
+        <img src="./assets/img/controller-right.png" class = "bg-img4">
       </div>
     </div>
   </section>
@@ -257,36 +359,48 @@ if(isset($_POST["submit"])){
       </g>
     </svg>
 
-    <div class="numberCircle point1"></div>
-    <div class = "step" style = "position: absolute; top: 280px;">
-      <!-- <h1>Step 1</h1>
-      <p>Lorem Ipsum</p> -->
-    </div>
-    <div class="numberCircle point2"></div>
-    <div class = "step" style = "position: absolute; top: 520px;left: 280px">
-      <!-- <h1>Step 2</h1>
-      <p>Lorem Ipsum</p> -->
-    </div>
-    <div class="numberCircle point3"></div>
-    <div class = "step" style = "position: absolute; top: 150px;left: 490px;">
-      <!-- <h1>Step 3</h1>
-      <p>Lorem Ipsum</p> -->
-    </div>
-    <div class="numberCircle point4"></div>
-    <div class = "step" style = "position: absolute; top: 370px;left: 750px;">
-      <!-- <h1>Step 3</h1>
-      <p>Lorem Ipsum</p> -->
-    </div>
-    <div class="numberCircle point5"></div>
-    <div class = "step" style = "position: absolute; top: 635px;left: 780px;">
-      <!-- <h1>Step 3</h1>
-      <p>Lorem Ipsum</p> -->
-    </div>
-    <div class="numberCircle point6"></div>
-    <div class = "step" style = "position: absolute; top: 145px;left: 980px;">
-      <!-- <h1>Step 3</h1>
-      <p>Lorem Ipsum</p> -->
-    </div>
+    <div class = "point point1">
+        <div class="numberCircle"></div>
+           <div class = "step step1">
+              <h1>Step 1</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+    <div class = "point point2">
+        <div class="numberCircle"></div>
+           <div class = "step step2">
+              <h1>Step 2</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+    <div class = "point point3">
+        <div class="numberCircle"></div>
+           <div class = "step step3">
+              <h1>Step 3</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+    <div class = "point point4">
+        <div class="numberCircle"></div>
+           <div class = "step step4">
+              <h1>Step 3</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+    <div class = "point point5">
+        <div class="numberCircle"></div>
+           <div class = "step step5">
+              <h1>Step 3</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
+    <div class = "point point6">
+        <div class="numberCircle"></div>
+           <div class = "step step6">
+              <h1>Step 3</h1>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+            </div>
+        </div>
   </div>
   </section>
 
@@ -412,6 +526,38 @@ if(isset($_POST["submit"])){
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="form" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-bottom-0">
+            <h5 class="modal-title text-center" id="exampleModalLabel">Contact Us</h5>
+            <button type="button" class="close btn-dark" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <form>
+            <div class="modal-body">
+              <div class="form-group my-2">
+                <label for="name" class = "mb-1">Name</label>
+                <input type="text" name = "name" class="form-control" id="name" aria-describedby="name" placeholder="Enter Name">
+              </div>
+              <div class="form-group my-2">
+                <label for="email" class = "mb-1">Email</label>
+                <input type="email" name = "email" class="form-control" id="email" placeholder="Email">
+              </div>
+              <div class="form-group my-2">
+                <label for="phone" class = "mb-1">Contact Number</label>
+                <input type="tel" name = "contact" class="form-control" id="phone" placeholder="Enter Phone number">
+              </div>
+            </div>
+            <div class="modal-footer border-top-0">
+              <button type="submit" class="btn btn-dark w-100">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
   </section>
 
   <footer style = "padding: 50px 0;">
@@ -442,10 +588,13 @@ if(isset($_POST["submit"])){
       </div>
     </div>
   </footer>
-  
 
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js" integrity="sha512-BmM0/BQlqh02wuK5Gz9yrbe7VyIVwOzD1o40yi1IsTjriX/NGF37NyXHfmFzIlMmoSIBXgqDiG1VNU6kB5dBbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <script>
+    $('#myModal').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+    AOS.init();
+  </script>
+
 </body>
 </html>
