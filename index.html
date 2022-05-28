@@ -16,6 +16,82 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <style>
 
+.timeline {
+	width: 300px;
+	margin: auto;
+  color: #fff;
+  }
+  
+.tp {
+	border-top: 2px dashed;
+	border-color: #fff !important;
+	margin:0; padding: 30px;
+	counter-increment: section;
+	position: relative;
+  }
+  
+  
+  
+.tp:nth-child(even):before {
+	content: counter(section);
+	right: 100%; 
+	margin-right: -20px;
+	position: absolute;
+	border-radius: 50%;
+	padding: 10px;
+	height: 20px;
+	width: 20px;
+	background-color: #fff;
+	text-align:center;
+	color: white;
+	font-size: 110%;
+  }
+  
+.tp:nth-child(odd):before {
+	content: counter(section);
+	left: 100%; 
+	margin-left: -20px;
+	position: absolute;
+	border-radius: 50%;
+	padding: 10px;
+	height: 20px;
+	width: 20px;
+	background-color: #fff;
+	text-align:center;
+	color: white;
+	font-size: 110%;
+  }
+  
+  
+  
+.tp:nth-child(even) {
+	border-left: 2px dashed;
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+	margin-right: 30px; 
+	padding-right: 0;
+  }
+  
+.tp:nth-child(odd) {
+	border-right: 2px dashed;
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+	margin-left: 30px; 
+	padding-left: 0;
+  }
+  
+.tp:first-child {
+	border-top: 0;
+	border-top-right-radius:0;
+	border-top-left-radius:0;
+  }
+  
+.tp:last-child {
+	border-bottom-right-radius:0;
+	border-bottom-left-radius:0;
+  }
+
+
     .bg-img1{
       width: 500px;
       height: auto;
@@ -59,21 +135,6 @@
       position:absolute;
       z-index: 1;
     }
-
-    .numberCircle {
-    border-radius: 50%;
-    width: 36px;
-    height: 36px;
-    padding: 8px;
-
-    background: #fff;
-    border: 2px solid #666;
-    color: #666;
-    text-align: center;
-    z-index: 0;
-
-    font: 32px Arial, sans-serif;
-}
 
 .object {
   animation: MoveUpDown 2s linear infinite;
@@ -154,7 +215,7 @@
 </head>
 <body>
 
-<?php
+<!-- <?php
 
 
 $conn = mysqli_connect("localhost", "root", "", "data");
@@ -171,7 +232,7 @@ if(isset($_POST["submit"])){
   <script> alert('Data Inserted Successfully'); </script>
   ";
 }
-?>
+?> -->
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
     <div class="container">
@@ -317,7 +378,7 @@ if(isset($_POST["submit"])){
     </div>
   </section>
 
-  <section style = "padding: 50px 0;background: purple;">
+  <section style = "padding: 50px 0;background: #4F2AA6;">
     <div class = "container" style = "position: relative;">
       <p class = "text-center text-white">Get to know us</p>
     <h3 class = "text-center text-white">HOW BETTING WORKS</h3>
@@ -326,7 +387,8 @@ if(isset($_POST["submit"])){
       <path d="M 10 80 C 40 10, 65 10, 95 80, 120 150, 190 200" stroke="black" fill="transparent"/>
     </svg> -->
     
-    <svg class="curved-line" viewBox="31 9 226 120" style = "margin: 100px 0">
+   <div style = "position: relative">
+       <svg class="curved-line" viewBox="31 9 226 120" style = "margin: 200px 0 0 0">
 
       <defs>
         <linearGradient x1="50%" y1="108.24102%" x2="50%" y2="29.9104628%" id="curved-line-gradient">
@@ -358,50 +420,61 @@ if(isset($_POST["submit"])){
         <use stroke="url(#curved-line-gradient)" xlink:href="#curved-line"></use>
       </g>
     </svg>
+  </div>
 
     <div class = "point point1">
-        <div class="numberCircle"></div>
+        <div class="numberCircle">1</div>
            <div class = "step step1">
               <h1>Step 1</h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
         </div>
     <div class = "point point2">
-        <div class="numberCircle"></div>
+        <div class="numberCircle">2</div>
            <div class = "step step2">
               <h1>Step 2</h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
         </div>
     <div class = "point point3">
-        <div class="numberCircle"></div>
+        <div class="numberCircle">3</div>
            <div class = "step step3">
               <h1>Step 3</h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
         </div>
     <div class = "point point4">
-        <div class="numberCircle"></div>
+        <div class="numberCircle">4</div>
            <div class = "step step4">
               <h1>Step 3</h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
         </div>
     <div class = "point point5">
-        <div class="numberCircle"></div>
+        <div class="numberCircle">5</div>
            <div class = "step step5">
               <h1>Step 3</h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
         </div>
     <div class = "point point6">
-        <div class="numberCircle"></div>
+        <div class="numberCircle">6</div>
            <div class = "step step6">
               <h1>Step 3</h1>
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
             </div>
         </div>
   </div>
+  <!-- <div class = "timeline">
+  <p class = "tp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti temporibus velit? Molestias harum voluptatibus veritatis explicabo ut velit deserunt, saepe sit commodi?</p>
+  <p class = "tp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti temporibus velit? Molestias harum voluptatibus veritatis explicabo ut velit deserunt, saepe sit commodi?</p>
+  <p class = "tp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti temporibus velit? Molestias harum voluptatibus veritatis explicabo ut velit deserunt, saepe sit commodi?</p>
+  <p class = "tp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti temporibus velit? Molestias harum voluptatibus veritatis explicabo ut velit deserunt, saepe sit commodi?</p>
+  <p class = "tp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti temporibus velit? Molestias harum voluptatibus veritatis explicabo ut velit deserunt, saepe sit commodi?</p>
+  <p class = "tp">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, iste iusto quas eligendi corporis id eius corrupti temporibus velit? Molestias harum voluptatibus veritatis explicabo ut velit deserunt, saepe sit commodi?</p>
+    
+  </div> -->
+
   </section>
 
   <section style = "padding: 50px 0;">
@@ -458,11 +531,11 @@ if(isset($_POST["submit"])){
         <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="flush-headingOne">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-              how to play on bettel app ?
+              How to play on bettel app ?
             </button>
           </h2>
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">log in with your mobile number to register on bettel app , follow the instruction as you set up your profile and then start participating in various streams 
+            <div class="accordion-body">Log in with your mobile number to register on bettel app , follow the instruction as you set up your profile and then start participating in various streams 
      
               . select a game which you are interested and select a stream , now use your skill , knowledge and bet on the streamers and earn.</div>
           </div>
@@ -470,11 +543,11 @@ if(isset($_POST["submit"])){
         <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="flush-headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-              can i actually win on bettel app ?
+              Can i actually win on bettel app ?
             </button>
           </h2>
           <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">absolutely !! you can definately win on bettel app by showing your gaming knowledge , we host different kind of cash contests, each with its own 
+            <div class="accordion-body">Absolutely !! you can definately win on bettel app by showing your gaming knowledge , we host different kind of cash contests, each with its own 
               entry fee and prize money </div>
           </div>
         </div>
@@ -485,7 +558,7 @@ if(isset($_POST["submit"])){
             </button>
           </h2>
           <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">adding money to your bettel account is both simple and safe . we have many different payments methods on bettel app to make sure that money transfer 
+            <div class="accordion-body">Adding money to your bettel account is both simple and safe . we have many different payments methods on bettel app to make sure that money transfer 
               is simple to the users . we also work hard to keep your data and personal details safe with us . and the best part is you can transfer your winning money directly 
              into your account or can convert them into various coupons.
             </div>
@@ -494,33 +567,33 @@ if(isset($_POST["submit"])){
         <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="flush-headingFour">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
-              can bettel app be played outside of india ?
+              Can bettel app be played outside of india ?
             </button>
           </h2>
           <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">as per now we have restricted our game services to india , but we promise to expand our services outside of India as well.
+            <div class="accordion-body">As per now we have restricted our game services to india , but we promise to expand our services outside of India as well.
             </div>
           </div>
         </div>
         <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="flush-headingFive">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
-              when will the app launch ?
+              When will the app launch ?
             </button>
           </h2>
           <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">the bettel app will be launched soon and users will be notified on the mail .
+            <div class="accordion-body">The bettel app will be launched soon and users will be notified on the mail .
             </div>
           </div>
         </div>
         <div class="accordion-item mb-3">
           <h2 class="accordion-header" id="flush-headingSix">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
-              if you have any other query !
+              If you have any other query !
             </button>
           </h2>
           <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
-            <div class="accordion-body">you can directly mail us at bettelapp@gmail.com
+            <div class="accordion-body">You can directly mail us at bettelapp@gmail.com
             </div>
           </div>
         </div>

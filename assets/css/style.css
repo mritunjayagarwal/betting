@@ -62,66 +62,379 @@ html, body{
 /* Roadmap */
 
 .point1{
-	position: absolute; top: 360px;
+	position: absolute; top: 460px;
 }
 
 .point2{
-	position: absolute; top: 470px;left: 320px;
+	position: absolute; top: 570px;left: 320px;
 }
 
 .point3{
-	position: absolute; top: 240px;left: 520px;
+	position: absolute; top: 340px;left: 520px;
 }
 
 .point4{
-	position: absolute; top: 390px;left: 680px;
+	position: absolute; top: 490px;left: 680px;
 }
 
 .point5{
-	position: absolute; top: 585px;left: 810px;
+	position: absolute; top: 685px;left: 810px;
 }
 
 .point6{
-	position: absolute; top: 230px;left: 1010px;
+	position: absolute; top: 330px;left: 1010px;
 }
 
 .step{
-	display: none;
-	background: #181818;
+	display: block;
+	max-width: 250px;
 	margin-top: 10px;
 	padding: 10px 15px;
 	margin-right: 10px;
 	z-index: 2;
 	position: relative;
-	border: 2px solid #eee;
-	border-radius:10px;
 }
 
 .step h1{
-	font-size: 30px;
+	font-size: 15px;
 	color: #fff;
 }
 
 .step p {
 	color: #fff;
+	font-size: 12px;
 }
 
-.point:hover > .step {
+/* .point:hover > .step {
 	display: block;
 	transition: 5s;
+} */
+
+.step1{
+	margin-top: -150px;
+}
+
+.step2{
+	margin-left: -50px;
+}
+
+.step3{
+	margin-top: -150px;
+	margin-left: -80px;
+}
+
+.step4{
+	margin-left: 50px !important;
+	margin-top: -80px;
 }
 
 .step5 {
-	margin-left: -300px;
+	margin-left: -100px;
 }
 
 .step6 {
-	margin-left: -200px;
+	margin-left: -250px;
+	margin-top: -100px;
 }
 
-@media only screen and (min-width: 1300px) {
+.numberCircle {
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    padding: 8px;
 
+    background: #B7298A;
+    color: #fff;
+    text-align: center;
+    z-index: 0;
 
+    font: 32px Arial, sans-serif;
+}
+
+@media only screen and (max-width: 1200px) {
+
+	.point1{
+		top: 440px;
+	}
+	
+	.point2{
+		top: 520px;
+		left: 270px;
+	}
+	
+	.point3{
+		top: 330px;
+		left: 430px;
+	}
+	
+	.point4{
+		top: 450px;
+		left: 555px;
+	}
+	
+	.point5{
+		top: 615px;
+		left: 670px;
+	}
+	
+	.point6{
+		top: 310px;
+		left: 840px;
+	}
+
+	.step6{
+		margin-left: -150px;
+		margin-top: -140px;
+	}
+
+}
+
+@media only screen and (min-width: 1400px) {
+
+	.point1{
+		top: 460px !important;
+	}
+	
+	.point2{
+		top: 595px !important;
+		left: 305px !important;
+	}
+	
+	 .point3{
+		top: 330px !important;
+		left: 590px !important;
+	}
+	
+	 .point4{
+		top: 485px !important;
+		left: 775px !important;
+	}
+	
+	
+	.point5{
+		top: 730px !important;
+		left: 930px !important;
+	}
+	
+	.point6{
+		top: 320px !important;
+		left: 1165px !important;
+	}
+
+	.step1{
+		margin-top: -180px;
+	}
+
+	.step3{
+		margin-left: -50px !important;
+		margin-top: -180px;
+	}
+
+	.step6{
+		margin-left: -100px !important;
+		margin-top: -180px !important;
+	}
+
+	.step p{
+		max-width: 200px;
+	}
+
+	.step h1{
+		font-size: 30px;
+	}
+
+	.step p {
+		font-size: 15px;
+	}
+
+}
+
+@media only screen and (max-width: 767px) {
+
+	.numberCircle{
+		width: 36px;
+		height: 36px;
+		font-size: 18px;
+	}
+
+	.point1{
+		top: 440px !important;
+	}
+	
+	.point2{
+		top: 485px !important;
+		left: 145px !important;
+	}
+	
+	.point3{
+		top: 380px !important;
+		left: 240px !important;
+	}
+	
+	.point4{
+		top: 440px !important;
+		left: 305px !important;
+	}
+	
+	.point5{
+		top: 540px !important;
+		left: 370px !important;
+	}
+	
+	.point6{
+		top: 370px !important;
+		left: 465px !important;
+	}
+
+	.step3{
+		margin-left: -120px !important;
+	}
+
+	.step6{
+		margin-left: -160px !important;
+		margin-top: -140px !important;
+	}
+
+	.step p{
+		max-width: 200px;
+	}
+
+}
+
+@media only screen and (max-width: 500px) {
+
+	.numberCircle{
+		width: 30px;
+		height: 30px;
+		font-size: 13px;
+	}
+
+	.point1{
+		top: 440px !important;
+	}
+	
+	.point2{
+		top: 475px !important;
+		left: 105px !important;
+	}
+	
+	.point3{
+		top: 400px !important;
+		left: 180px !important;
+	}
+	
+	.point4{
+		top: 450px !important;
+		left: 230px !important;
+	}
+	
+	.point5{
+		top: 515px !important;
+		left: 270px !important;
+	}
+	
+	.point6{
+		top: 400px !important;
+		left: 355px !important;
+	}
+
+	.step {
+		max-width: 180px;
+	}
+
+	.step h1{
+		font-size: 12px !important;
+	}
+
+	.step p {
+		font-size: 10px !important;
+	}
+
+	.step1{
+		margin-top: -100px;
+		margin-left: -15px;
+	}
+
+	.step2{
+		margin-left: -110px;
+		margin-top: -20px;
+	}
+
+	.step3{
+		margin-left: -100px !important;
+		margin-top: -110px;
+	}
+
+	.step4{
+		margin-left: -100px !important;
+		margin-top: 10px !important;
+	}
+
+	.step5{
+		margin-left: -10px;
+		margin-top: -5px;
+	}
+
+	.step6{
+		margin-left: -120px !important;
+		margin-top: -110px !important;
+	}
+
+	.step p{
+		max-width: 200px;
+	}
+
+}
+
+@media only screen and (max-width: 991px) {
+
+	.point1{
+		top: 430px;
+	}
+	
+	.point2{
+		top: 490px;
+		left: 200px;
+	}
+	
+	.point3{
+		top: 350px;
+		left: 320px;
+	}
+	
+	.point4{
+		top: 430px;
+		left: 400px;
+	}
+	
+	.point5{
+		top: 560px;
+		left: 490px;
+	}
+	
+	.point6{
+		top: 340px;
+		left: 620px;
+	}
+
+	.step3{
+		margin-left: -120px;
+	}
+
+	.step6{
+		margin-left: -160px;
+		margin-top: -140px;
+	}
+
+	.step p{
+		max-width: 200px;
+	}
+
+	/* .numberCircle{
+		width: 46px;
+		height: 46px;
+		font-size: 15px;
+	} */
 
 }
 
@@ -130,30 +443,6 @@ html, body{
 
 	.controller{
 		display: none;
-	}
-
-	.point1{
-		position: absolute; top: 350px;
-	}
-	
-	.point2{
-		position: absolute; top: 380px;left: 100px;
-	}
-	
-	.point3{
-		position: absolute; top: 300px;left: 180px;
-	}
-	
-	.point4{
-		position: absolute; top: 360px;left: 235px;
-	}
-	
-	.point5{
-		position: absolute; top: 380px;left: 320px;
-	}
-	
-	.point6{
-		position: absolute; top: 300px;left: 350px;
 	}
 
 	.step h1 {
