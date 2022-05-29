@@ -26,6 +26,15 @@ html, body{
   color: #eee;
 }
 
+.bwe, .bwe1{
+	font-size: 50px;
+	z-index: 2
+}
+
+.bwep{
+	width: 80%;
+}
+
 /*---------------------
   Services Section
 -----------------------*/
@@ -151,6 +160,18 @@ html, body{
     font: 32px Arial, sans-serif;
 }
 
+.timeline {
+	width: 300px;
+	margin: auto;
+	color: #fff;
+	display: none;
+  }
+
+.controller{
+	margin: -150px 0 0 -300px;
+	min-width: 990px !important;
+}
+
 @media only screen and (max-width: 1200px) {
 
 	.point1{
@@ -251,142 +272,39 @@ html, body{
 
 @media only screen and (max-width: 767px) {
 
-	.numberCircle{
-		width: 36px;
-		height: 36px;
-		font-size: 18px;
+	.bwe, .bwe1{
+		font-size: 30px !important;
 	}
 
-	.point1{
-		top: 440px !important;
-	}
-	
-	.point2{
-		top: 485px !important;
-		left: 145px !important;
-	}
-	
-	.point3{
-		top: 380px !important;
-		left: 240px !important;
-	}
-	
-	.point4{
-		top: 440px !important;
-		left: 305px !important;
-	}
-	
-	.point5{
-		top: 540px !important;
-		left: 370px !important;
-	}
-	
-	.point6{
-		top: 370px !important;
-		left: 465px !important;
-	}
-
-	.step3{
-		margin-left: -120px !important;
-	}
-
-	.step6{
-		margin-left: -160px !important;
-		margin-top: -140px !important;
-	}
-
-	.step p{
-		max-width: 200px;
-	}
-
-}
-
-@media only screen and (max-width: 500px) {
-
-	.numberCircle{
-		width: 30px;
-		height: 30px;
+	.bwep{
 		font-size: 13px;
+		max-width: 70%;
 	}
 
-	.point1{
-		top: 440px !important;
-	}
-	
-	.point2{
-		top: 475px !important;
-		left: 105px !important;
-	}
-	
-	.point3{
-		top: 400px !important;
-		left: 180px !important;
-	}
-	
-	.point4{
-		top: 450px !important;
-		left: 230px !important;
-	}
-	
-	.point5{
-		top: 515px !important;
-		left: 270px !important;
-	}
-	
-	.point6{
-		top: 400px !important;
-		left: 355px !important;
+	.svg, .point, .step{
+		display: none;
 	}
 
-	.step {
-		max-width: 180px;
-	}
-
-	.step h1{
-		font-size: 12px !important;
-	}
-
-	.step p {
-		font-size: 10px !important;
-	}
-
-	.step1{
-		margin-top: -100px;
-		margin-left: -15px;
-	}
-
-	.step2{
-		margin-left: -110px;
-		margin-top: -20px;
-	}
-
-	.step3{
-		margin-left: -100px !important;
-		margin-top: -110px;
-	}
-
-	.step4{
-		margin-left: -100px !important;
-		margin-top: 10px !important;
-	}
-
-	.step5{
-		margin-left: -10px;
-		margin-top: -5px;
-	}
-
-	.step6{
-		margin-left: -120px !important;
-		margin-top: -110px !important;
-	}
-
-	.step p{
-		max-width: 200px;
+	.timeline{
+		display: block;
 	}
 
 }
 
 @media only screen and (max-width: 991px) {
+
+	.controller{
+		display: none;
+	}
+
+	.bwe, .bwe1{
+		width: 80%;
+		font-size: 40px;
+	}
+
+	.bwep{
+		width: 80%;
+	}
 
 	.point1{
 		top: 430px;
@@ -440,14 +358,6 @@ html, body{
 
 
 @media only screen and (max-width: 1100px) {
-
-	.controller{
-		display: none;
-	}
-
-	.step h1 {
-		font-size: 15px;
-	}
 
 	.bg-img1{
 		position: absolute;
