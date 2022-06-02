@@ -28,11 +28,16 @@ html, body{
 
 .bwe, .bwe1{
 	font-size: 50px;
+	font-family: worker;
 	z-index: 2
 }
 
 .bwep{
 	width: 80%;
+}
+
+.fonth{
+	font-family: worker;
 }
 
 /*---------------------
@@ -70,82 +75,6 @@ html, body{
 
 /* Roadmap */
 
-.point1{
-	position: absolute; top: 460px;
-}
-
-.point2{
-	position: absolute; top: 570px;left: 320px;
-}
-
-.point3{
-	position: absolute; top: 340px;left: 520px;
-}
-
-.point4{
-	position: absolute; top: 490px;left: 680px;
-}
-
-.point5{
-	position: absolute; top: 685px;left: 810px;
-}
-
-.point6{
-	position: absolute; top: 330px;left: 1010px;
-}
-
-.step{
-	display: block;
-	max-width: 250px;
-	margin-top: 10px;
-	padding: 10px 15px;
-	margin-right: 10px;
-	z-index: 2;
-	position: relative;
-}
-
-.step h1{
-	font-size: 15px;
-	color: #fff;
-}
-
-.step p {
-	color: #fff;
-	font-size: 12px;
-}
-
-/* .point:hover > .step {
-	display: block;
-	transition: 5s;
-} */
-
-.step1{
-	margin-top: -150px;
-}
-
-.step2{
-	margin-left: -50px;
-}
-
-.step3{
-	margin-top: -150px;
-	margin-left: -80px;
-}
-
-.step4{
-	margin-left: 50px !important;
-	margin-top: -80px;
-}
-
-.step5 {
-	margin-left: -100px;
-}
-
-.step6 {
-	margin-left: -250px;
-	margin-top: -100px;
-}
-
 .numberCircle {
     border-radius: 50%;
     width: 56px;
@@ -172,104 +101,6 @@ html, body{
 	min-width: 990px !important;
 }
 
-@media only screen and (max-width: 1200px) {
-
-	.point1{
-		top: 440px;
-	}
-	
-	.point2{
-		top: 520px;
-		left: 270px;
-	}
-	
-	.point3{
-		top: 330px;
-		left: 430px;
-	}
-	
-	.point4{
-		top: 450px;
-		left: 555px;
-	}
-	
-	.point5{
-		top: 615px;
-		left: 670px;
-	}
-	
-	.point6{
-		top: 310px;
-		left: 840px;
-	}
-
-	.step6{
-		margin-left: -150px;
-		margin-top: -140px;
-	}
-
-}
-
-@media only screen and (min-width: 1400px) {
-
-	.point1{
-		top: 460px !important;
-	}
-	
-	.point2{
-		top: 595px !important;
-		left: 305px !important;
-	}
-	
-	 .point3{
-		top: 330px !important;
-		left: 590px !important;
-	}
-	
-	 .point4{
-		top: 485px !important;
-		left: 775px !important;
-	}
-	
-	
-	.point5{
-		top: 730px !important;
-		left: 930px !important;
-	}
-	
-	.point6{
-		top: 320px !important;
-		left: 1165px !important;
-	}
-
-	.step1{
-		margin-top: -180px;
-	}
-
-	.step3{
-		margin-left: -50px !important;
-		margin-top: -180px;
-	}
-
-	.step6{
-		margin-left: -100px !important;
-		margin-top: -180px !important;
-	}
-
-	.step p{
-		max-width: 200px;
-	}
-
-	.step h1{
-		font-size: 30px;
-	}
-
-	.step p {
-		font-size: 15px;
-	}
-
-}
-
 @media only screen and (max-width: 767px) {
 
 	.bwe, .bwe1{
@@ -290,72 +121,6 @@ html, body{
 	}
 
 }
-
-@media only screen and (max-width: 991px) {
-
-	.controller{
-		display: none;
-	}
-
-	.bwe, .bwe1{
-		width: 80%;
-		font-size: 40px;
-	}
-
-	.bwep{
-		width: 80%;
-	}
-
-	.point1{
-		top: 400px;
-	}
-	
-	.point2{
-		top: 460px;
-		left: 200px;
-	}
-	
-	.point3{
-		top: 320px;
-		left: 320px;
-	}
-	
-	.point4{
-		top: 400px;
-		left: 400px;
-	}
-	
-	.point5{
-		top: 530px;
-		left: 490px;
-	}
-	
-	.point6{
-		top: 310px;
-		left: 620px;
-	}
-
-	.step3{
-		margin-left: -120px;
-	}
-
-	.step6{
-		margin-left: -160px;
-		margin-top: -140px;
-	}
-
-	.step p{
-		max-width: 200px;
-	}
-
-	/* .numberCircle{
-		width: 46px;
-		height: 46px;
-		font-size: 15px;
-	} */
-
-}
-
 
 @media only screen and (max-width: 1100px) {
 
