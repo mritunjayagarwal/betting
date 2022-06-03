@@ -506,6 +506,24 @@
   }
 }
 
+.updown{
+  width: 100px;
+  height: auto;
+  animation: zoom-in-zoom-out 3s ease infinite;
+}
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
 .car {
   position: absolute;
   top: 195px;
@@ -518,6 +536,47 @@
   </style>
 </head>
 <body>
+
+<!-- <?php
+$host = "localhost";
+$databasebUser= "root";
+$databasePwd="";
+$dataBaseName= "data";
+$connect=mysqli_connect($host,$databasebUser,$databasePwd,$dataBaseName);
+
+if(isset($_POST['submit'])){
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $contact = $_POST['contact'];
+  $message = $_POST['message'];
+  $myQuery = "INSERT INTO contact VALUES('$name', '$email', '$contact', '$message')";
+  $runQuery= mysqli_query($connect, $myQuery);
+  echo "
+    <script> alert('Your Details have been Submitted Successfully. Our Team will contact you shortly'); </script>
+  ";
+}
+
+if(isset($_POST['ereg'])){
+  $email = $_POST['registere'];
+  $myQuery = "INSERT INTO register VALUES('$email')";
+  $runQuery= mysqli_query($connect, $myQuery);
+  echo "
+    <script> alert('Email Submitted Successfully'); </script>
+  ";
+}
+// if($connect==true){
+//     echo "connected";
+// }else{
+//    echo" not connected";
+// };
+
+$query = "SELECT COUNT(*) AS count FROM register";
+$query_result = mysqli_query($connect, $query);
+while($row = mysqli_fetch_assoc($query_result)){
+  $output = $row['count'];
+}
+
+?> -->
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
     <div class="container">
@@ -541,13 +600,13 @@
                 <p class = "bwep" data-aos="fade-up" data-aos-delay="700" data-aos-duration = "1000" class = "int-p" style = "z-index: 2;position: relative">Register with your mail</p>
               </div>
               <div class = "email-subscribe px-2 py-2 mt-4" style = "z-index: 2;background: #fff; border-radius: 50px;position: relative" data-aos="fade-right" data-aos-delay="1200" data-aos-duration = "500">
-                <form action = "register.php">
+                <form method = "POST">
                   <div class = "d-flex" style = "z-index: 2">
                       <div class = "" style = "flex: 1;z-index: 2">
-                        <input type="email" name = "email"  class = "w-100 p-2" style = "border:none; outline: none;z-index: 2" placeholder = "Enter Email ID" required>
+                        <input type="email" name = "registere"  class = "w-100 p-2" style = "border:none; outline: none;z-index: 2" placeholder = "Enter Email ID" required>
                       </div>
                       <div style = "z-index: 2">
-                        <button type = "submit" class = "btn btn-primary p-2" style = "border-radius: 20px;">Get Started &rarr;</button>
+                        <button type = "submit" name = "ereg" class = "btn btn-primary p-2" style = "border-radius: 20px;">Get Started &rarr;</button>
                       </div>
                   </div>
                 </form>
@@ -610,12 +669,13 @@
                   <div class = "d-flex">
                     <div class = "d-flex align-items-center justify-content-center">
                       <img src = "assets/img//Ellipse 11.png" style = "width: 100px; height: auto;">
-                      <img src = "assets/img//group 8.png" class = "front-img" style = "width: 100px; height: auto;">
+                      <img src = "assets/img//group 8.png" class = "front-img updown">
                       <img src = "assets/img//Ellipse 11.png" class = "back-img" style = "width: 100px; height: auto;">
                     </div>
                     <div class = "d-flex align-items-center justify-content-center p-3">
                       <div>
-                        <h1 class = "text-white">10</h1>
+                        <!-- <h1 class = "text-white"><?php echo $output; ?></h1> -->
+                        <h1 class = "text-white">32</h1>
                         <p style = "color: #fff; font-weight: 600">Registered Users</p>
                       </div>
                     </div>
@@ -900,7 +960,7 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-          <form>
+          <form method = "POST">
             <div class="modal-body">
               <div class="form-group my-2">
                 <label for="name" class = "mb-1">Name</label>
@@ -913,6 +973,10 @@
               <div class="form-group my-2">
                 <label for="phone" class = "mb-1">Contact Number</label>
                 <input type="tel" name = "contact" class="form-control" id="phone" placeholder="Enter Phone number" required>
+              </div>
+              <div class="form-group my-2">
+                <label for="message" class = "mb-1">Message</label>
+                <textarea name="message" class = "form-control" id="message" required></textarea>
               </div>
             </div>
             <div class="modal-footer border-top-0">
@@ -938,17 +1002,17 @@
         <div class = "col-lg-4 col-md-4">
           <p class = "text-white" data-aos="fade-right" data-aos-delay="800" data-aos-duration = "1000">Follow Us</p>
           <div class = "d-flex">
-          <div class = "social mx-1" style = "background: #fff; border-radius: 50%;padding: 10px 12px 10px 12px">
-            <i class = "fa fa-instagram" data-aos="fade-right" data-aos-delay="950" data-aos-duration = "400"></i>
+          <div class = "social mx-1" style = "background: #fff; border-radius: 50%;padding: 10px 12px 10px 12px" data-aos="fade-right" data-aos-delay="950" data-aos-duration = "400">
+            <a href = "https://instagram.com/bettelapp?igshid=YmMyMTA2M2Y=" target = "_blank" style = "color: #000;"><i class = "fa fa-instagram"></i></a>
           </div>
-            <div class = "social mx-1" style = "background: #fff; border-radius: 50%;padding: 10px 12px 10px 12px">
-              <i class = "fa fa-linkedin" data-aos="fade-right" data-aos-delay="1000" data-aos-duration = "400"></i>
+            <div class = "social mx-1" style = "background: #fff; border-radius: 50%;padding: 10px 12px 10px 12px" data-aos="fade-right" data-aos-delay="1000" data-aos-duration = "400">
+              <a href = "https://twitter.com/BettelApp?t=oLv2XLcPuPOPjtgbRho2rg&s=08" target = "_blank" style = "color: #000;"><i class = "fa fa-linkedin"></i></a>
             </div>
-            <div class = "social mx-1" style = "background: #fff; border-radius: 50%;padding: 10px 12px 10px 12px">
-              <i class = "fa fa-twitter" data-aos="fade-right" data-aos-delay="900" data-aos-duration = "400"></i>
+            <div class = "social mx-1" style = "background: #fff; border-radius: 50%;padding: 10px 12px 10px 12px" data-aos="fade-right" data-aos-delay="900" data-aos-duration = "400">
+              <a href = "https://twitter.com/BettelApp?t=oLv2XLcPuPOPjtgbRho2rg&s=08" target = "_blank" style = "color: #000;"><i class = "fa fa-twitter"></i></a>
             </div>
-              <div class = "social p-2 px-3 mx-1" style = "background: #fff; border-radius: 50%;">
-                <i class = "fa fa-facebook" data-aos="fade-right" data-aos-delay="850" data-aos-duration = "400"></i>
+              <div class = "social p-2 px-3 mx-1" style = "background: #fff; border-radius: 50%;" data-aos="fade-right" data-aos-delay="850" data-aos-duration = "400">
+                <a href = "https://www.facebook.com/profile.php?id=100080233788959" target = "_blank" style = "color: #000;"><i class = "fa fa-facebook"></i></a>
               </div>
           </div>
         </div>
@@ -966,5 +1030,10 @@
       let path = anime.path('#demo-svg path');
     </script>
     <script src="./assets/js/main.js"></script>
+    <script>
+          if ( window.history.replaceState ) {
+            window.history.replaceState( null, null, window.location.href );
+          }
+</script>
 </body>
 </html>
