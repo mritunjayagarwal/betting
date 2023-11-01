@@ -553,50 +553,6 @@
 </head>
 <body>
 
-<?php
-$host = "localhost";
-$databasebUser= "root";
-$databasePwd="";
-$dataBaseName= "data";
-$connect=mysqli_connect($host,$databasebUser,$databasePwd,$dataBaseName);
-
-if(isset($_POST['submit'])){
-  $name = $_POST['name'];
-  $email = $_POST['email'];
-  $contact = $_POST['contact'];
-  $message = $_POST['message'];
-  $myQuery = "INSERT INTO contact VALUES('$name', '$email', '$contact', '$message')";
-  $runQuery= mysqli_query($connect, $myQuery);
-  echo "
-    <script> alert('Your Details have been Submitted Successfully. Our Team will contact you shortly'); </script>
-  ";
-}
-
-if(isset($_POST['enter'])){
-  $email = $_POST['emaill'];
-  $name = $_POST['namee'];
-  $phone = $_POST['contactt'];
-  $choice = $_POST['choice'];
-  $myQuery = "INSERT INTO entries VALUES('$name', '$email', '$phone', '$choice')";
-  $runQuery= mysqli_query($connect, $myQuery);
-  echo "
-    <script> alert('Registered Successfully'); </script>
-  ";
-}
-// if($connect==true){
-//     echo "connected";
-// }else{
-//    echo" not connected";
-// };
-
-$query = "SELECT COUNT(*) AS count FROM entries";
-$query_result = mysqli_query($connect, $query);
-while($row = mysqli_fetch_assoc($query_result)){
-  $output = $row['count'];
-}
-
-?>
-
   <div class = "main">
   <nav class="navbar navbar-expand-lg navbar-dark bg-transparent fixed-top" aria-label="Eighth navbar example">
     <div class="container">
